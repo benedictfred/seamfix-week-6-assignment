@@ -1,0 +1,135 @@
+:host {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.top-bar {
+  background-color: #278da8;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+  font-size: 14px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background-color: white;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  color: #1a202c;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.logo-subtitle {
+  color: #f97316;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2d3748;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #278da8;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-login,
+.btn-join {
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn-login {
+  background-color: white;
+  color: #278da8;
+  border: 1.5px solid #278da8;
+}
+
+.btn-login:hover {
+  background-color: #f0f9fb;
+}
+
+.btn-join {
+  background-color: #f97316;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 6px -1px rgba(249, 115, 22, 0.2);
+}
+
+.btn-join:hover {
+  background-color: #ea580c;
+}
+
+.main-content {
+  padding: 40px;
+  height: 100vh;
+}
+
+.color-select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  color: #333;
+}
+
+.color-select:focus {
+  border-color: #278da8;
+  box-shadow: 0 0 0 2px rgba(39, 141, 168, 0.2);
+}

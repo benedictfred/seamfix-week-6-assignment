@@ -1,0 +1,54 @@
+<div class="login-page">
+  <div class="login-card">
+    <div class="login-header">
+      <span class="pre-title">YRA ACCOUNT</span>
+      <h1>Welcome back</h1>
+      <p>Sign in to access your member dashboard.</p>
+    </div>
+
+    <form class="login-form" (submit)="onSubmit($event)">
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          id="email"
+          [formField]="loginForm.email"
+          placeholder="you@example.com"
+          [class.invalid]="loginForm.email().touched() && loginForm.email().invalid()"
+        />
+        @if (loginForm.email().touched() && loginForm.email().invalid()) {
+          @for (error of loginForm.email().errors(); track $index) {
+            <span class="error-message">{{ error.message }}</span>
+          }
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          [formField]="loginForm.password"
+          placeholder="........"
+          [class.invalid]="loginForm.password().touched() && loginForm.password().invalid()"
+        />
+        @if (loginForm.password().touched() && loginForm.password().invalid()) {
+          @for (error of loginForm.password().errors(); track $index) {
+            <span class="error-message">{{ error.message }}</span>
+          }
+        }
+      </div>
+
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="remember" [formField]="loginForm.rememberMe" />
+        <label for="remember">Remember me</label>
+      </div>
+
+      <button type="submit" class="btn-submit">Sign in</button>
+    </form>
+
+    <div class="login-footer">
+      <p>New to YRA? <a routerLink="/join-yra">Create an account</a></p>
+    </div>
+  </div>
+</div>
